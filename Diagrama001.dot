@@ -1,0 +1,97 @@
+digraph G {
+    // Definindo a direção do layout para minimizar cruzamentos
+    rankdir=LR; // Layout da esquerda para a direita (pode ser ajustado para "TB" se preferir de cima para baixo)
+    nodesep=0.5; // Espaço entre os nós
+    ranksep=1;   // Espaçamento entre os subgrafos
+
+    // Subgráfico da MODERAÇÃO
+    subgraph cluster_umv {
+        label="MODERAÇÃO"
+        style=dashed
+        color=lightgrey
+        UMV [label="UMV" shape=circle]
+        UMV_DATABASE [label="Global Owning\nDatabase" shape=cylinder]
+        UMV -> UMV_DATABASE [label="lê/grava"]
+    }
+
+    // Conexões entre UMV e os nós OWNING
+    UMV -> OWNING_01 [style=dashed]
+    UMV -> OWNING_02 [style=dashed]
+    UMV -> OWNING_N [style=dashed]
+
+    subgraph cluster_unidade {
+        label="EQUIPAMENTO"
+        style=dashed
+        color=lightgrey
+        LST_UNIDADES_CONHECIDAS [label="Lista de\nUnidades\nconhecidas" shape=note]
+        UNIDADE_MILITAR [label="Unidade\nMilitar" shape=circle]
+        IA_SUPERVISOR [label="Supervisor\nIA" shape=rectangle]
+        OPERADOR [label="Operador"]
+        UNIDADE_MILITAR -> LST_UNIDADES_CONHECIDAS [label="retém"]
+    }
+
+    // Definindo os nós OWNING e suas respectivas entidades
+    OWNING_01 [label="OWNING\n1" shape=ellipse]
+    OWNADO_01 [label="OWNADO\n1" shape=ellipse]
+    IA_ASSISTENCIA_01  [label="Assistência IA\n1" shape=rectangle]
+
+    OWNING_02 [label="OWNING\n2" shape=ellipse]
+    OWNADO_02 [label="OWNADO\n2" shape=ellipse]
+    IA_ASSISTENCIA_02  [label="Assistência IA\n2" shape=rectangle]
+
+    OWNING_N [label="OWNING\nn" shape=ellipse]
+    OWNADO_N [label="OWNADO\nn" shape=ellipse]
+    IA_ASSISTENCIA_N  [label="Assistência IA\nn" shape=rectangle]
+
+    // Subgrafos para agrupar os "OWNING" dentro de retângulos
+    subgraph cluster_owning_1 {
+        label="OWNING 1"
+        style=dashed
+        color=lightgrey
+        OWNING_01
+        OWNADO_01
+        IA_ASSISTENCIA_01
+        OWNING_DATABASE_01 [label="OWNING\nDATABASE 1" shape=cylinder]
+    }
+
+    subgraph cluster_owning_2 {
+        label="OWNING 2"
+        style=dashed
+        color=lightgrey
+        OWNING_02
+        OWNADO_02
+        IA_ASSISTENCIA_02
+        OWNING_DATABASE_02 [label="OWNING\nDATABASE 2" shape=cylinder]
+    }
+
+    subgraph cluster_owning_n {
+        label="OWNING n"
+        style=dashed
+        color=lightgrey
+        OWNING_N
+        OWNADO_N
+        IA_ASSISTENCIA_N
+        OWNING_DATABASE_N [label="OWNING\nDATABASE n" shape=cylinder]
+    }
+
+    // Relações entre os nós
+    IA_SUPERVISOR -> UNIDADE_MILITAR [label="supervisiona"]
+    OPERADOR -> UNIDADE_MILITAR [label="opera"]
+
+    UNIDADE_MILITAR -> OWNING_01 [label="possui"]
+    UNIDADE_MILITAR -> OWNING_02 [label="possui"]
+    UNIDADE_MILITAR -> OWNING_N [label="possui"]
+
+    OWNING_01 -> OWNADO_01 [label="owna"]
+    OWNING_02 -> OWNADO_02 [label="owna"]
+    OWNING_N -> OWNADO_N [label="owna"]
+
+    IA_ASSISTENCIA_01 -> OWNING_01 [label="owna"]
+    IA_ASSISTENCIA_02 -> OWNING_02 [label="owna"]
+    IA_ASSISTENCIA_N -> OWNING_N [label="owna"]
+
+    // Relações 1:1 entre "OWNING_DATABASE" e "OWNING"
+    OWNING_DATABASE_01 -> OWNING_01 [label="relaciona"]
+    OWNING_DATABASE_02 -> OWNING_02 [label="relaciona"]
+    OWNING_DATABASE_N -> OWNING_N [label="relaciona"]
+}
