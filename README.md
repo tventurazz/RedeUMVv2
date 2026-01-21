@@ -7,4 +7,6 @@ Este artigo apresenta uma rede colaborativa de produção de inteligência milit
 
 **Palavras-chave**: Sistemas Multiagente, Human-in-the-Loop, Máquina de Habermas, IMGINT, HUMINT, Inteligência Militar, Alta Confiabilidade.
 
-[paper](https://raw.githubusercontent.com/tventurazz/RedeUMVv2/refs/heads/main/HA-HMAS-Habermas.md)
+[paper](https://github.com/tventurazz/RedeUMVv2/blob/main/HA-HMAS-Habermas.md)
+
+
