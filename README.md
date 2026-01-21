@@ -70,7 +70,7 @@ Graças à sua ajuda, consegui estruturar melhor minhas ideias e aprofundar minh
 ## MIT License
 
 ```
-Copyright (c) 2024 Tiago Ventura
+Copyright (c) 2026 Tiago Ventura
 
 Permissão é concedida, gratuitamente, a qualquer pessoa que obtenha uma cópia
 deste texto científico e dos arquivos associados (o "Texto"), para lidar com
