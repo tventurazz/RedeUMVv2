@@ -8,9 +8,14 @@
 
 Este artigo apresenta uma rede colaborativa de produção de inteligência militar baseada no conceito de Sistemas Multiagente Híbridos com Participação Humana (Human-Agent Hybrid Multi-Agent System – HA-HMAS), com capacidades avançadas de processamento de IMGINT. A rede processa dados provenientes de sensores SAR, IR, hiperespectrais e eletro-ópticos, visando produzir informações de HUMINT, especificamente observações de comportamento de indivíduos em campo, de maneira colaborativa e deliberativa. A arquitetura combina agentes autônomos, LLMs e analistas humanos em ciclos estruturados segundo a Metodologia da Máquina de Habermas, garantindo validação intersubjetiva, rastreabilidade, governança e alta confiabilidade em inteligência estratégica, operacional e tática.
 
-**Palavras-chave**: Sistemas Multiagente, Human-in-the-Loop, Máquina de Habermas, IMGINT, HUMINT, Inteligência Militar, Alta Confiabilidade.
-
 [paper](https://github.com/tventurazz/RedeUMVv2/blob/main/HA-HMAS-Habermas.md)
+
+
+## 📌 Hybrid Human–Agent Intelligence Cycle Network (HHA-ICN): Arquitetura Sociotécnica Deliberativa para Implementação Distribuída do Intelligence Cycle
+
+Este artigo propõe e desenvolve conceitualmente uma Hybrid Human–Agent Intelligence Cycle Network (HHA-ICN) como uma arquitetura sociotécnica distribuída destinada à implementação automatizada, cooperativa e deliberativa do Intelligence Cycle. O modelo integra múltiplas unidades independentes baseadas em hybrid-architecture human-agent systems, operadas por humanos e assistidas por agentes artificiais capazes de atuar em linguagem natural. A arquitetura incorpora, de forma explícita, princípios procedimentais da teoria do agir comunicativo e da máquina de Habermas em etapas críticas da produção de inteligência. Exemplos práticos baseados nas disciplinas clássicas de inteligência (HUMINT, SIGINT, OSINT, IMINT, MASINT e CYBINT) são apresentados para demonstrar o funcionamento operacional do ciclo em rede.
+
+[paper](https://github.com/tventurazz/RedeUMVv2/blob/main/HHA-ICN-Intelligence-Cycle.md)
 
 ## :pushpin: Glossário
 
